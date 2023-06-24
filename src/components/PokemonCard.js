@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Card } from "semantic-ui-react";
 import Popupmodal from "./Popupmodal";
+
 function PokemonCard({ card, deleteFromScreen }) {
   const { id, name, hp, sprites } = card;
   const [isFav, setFav] = useState(false);
@@ -18,7 +19,10 @@ function PokemonCard({ card, deleteFromScreen }) {
           <img src={sprites.front} />
         </div>
         <div className="content">
-          <Popupmodal />
+          {/* <Popupmodal
+            updatedcomment={updatedcomment}
+            handleNewComment={handleNewComment}
+          /> */}
           <div className="header">{name}</div>
         </div>
         <div className="extra content">

@@ -1,62 +1,68 @@
-import React, { useState } from "react";
-function Popupmodal({ updatedcomment, handleNewComment }) {
-  const [comment, setComment] = useState("");
-  const [showDialog, setShowDialog] = useState(false);
+// import React, { useState } from "react";
+// function Popupmodal({ updatedcomment, handleNewComment }) {
+//   const [newcomment, setComment] = useState({ updatedcomment });
+//   const [showDialog, setShowDialog] = useState(false);
 
-  const handleInputChange = (e) => {
-    setComment(e.target.value);
-  };
+//   const handleInputChange = (e) => {
+//     setComment(e.target.value);
+//   };
 
-  const handleDialogSubmit = (e) => {
-    e.preventDefault();
-    handleNewComment(comment);
-    setShowDialog(false);
-  };
+//   const handleDialogSubmit = (e) => {
+//     e.preventDefault();
+//     handleNewComment(e.target.comment);
+//     setShowDialog(false);
+//     fetch(`http://localhost:6001/cats/${id}`, {
+//       method: "PATCH",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify({ comment: newcomment }),
+//     });
+//   };
 
-  const handleUpdateDetailsClick = () => {
-    setShowDialog(true);
-  };
+//   const handleUpdateDetailsClick = () => {
+//     setShowDialog(true);
+//   };
 
-  const handleCancelClick = () => {
-    setShowDialog(false);
-  };
-  return (
-    <div>
-      <h1 style={{ color: "white" }}>About this Project</h1>
-      <button id="updateDetails" onClick={handleUpdateDetailsClick}>
-        Comment...
-      </button>
+//   const handleCancelClick = () => {
+//     setShowDialog(false);
+//   };
+//   return (
+//     <div>
+//       <button id="updateDetails" onClick={handleUpdateDetailsClick}>
+//         Comment...
+//       </button>
 
-      {showDialog && (
-        <dialog open id="favDialog">
-          <form onSubmit={handleDialogSubmit}>
-            <p>
-              {updatedcomment}
-              <br />
-              <label htmlFor="favAnimal">Comment:</label>
-              <input type="text" value={comment} onChange={handleInputChange} />
-              {/* <select
-                id="favAnimal"
-                name="favAnimal"
-                value={favAnimal}
-                onChange={handleInputChange}>
-                <option></option>
-                <option>Brine shrimp</option>
-                <option>Red panda</option>
-                <option>Spider monkey</option>
-              </select> */}
-            </p>
-            <div>
-              <button id="cancel" type="reset" onClick={handleCancelClick}>
-                Cancel
-              </button>
-              <button type="submit">Confirm</button>
-            </div>
-          </form>
-        </dialog>
-      )}
-    </div>
-  );
-}
+//       {showDialog && (
+//         <dialog open id="favDialog">
+//           <form onSubmit={handleDialogSubmit}>
+//             <p>
+//               {newcomment}
+//               <br />
+//               <label htmlFor="favAnimal">Comment:</label>
+//               <input type="text" value={comment} onChange={handleInputChange} />
+//               {/* <select
+//                 id="favAnimal"
+//                 name="favAnimal"
+//                 value={favAnimal}
+//                 onChange={handleInputChange}>
+//                 <option></option>
+//                 <option>Brine shrimp</option>
+//                 <option>Red panda</option>
+//                 <option>Spider monkey</option>
+//               </select> */}
+//             </p>
+//             <div>
+//               <button id="cancel" type="reset" onClick={handleCancelClick}>
+//                 Cancel
+//               </button>
+//               <button type="submit">Confirm</button>
+//             </div>
+//           </form>
+//         </dialog>
+//       )}
+//     </div>
+//   );
+// }
 
-export default Popupmodal;
+// export default Popupmodal;

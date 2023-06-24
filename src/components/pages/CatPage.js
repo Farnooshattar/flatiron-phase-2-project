@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import PokemonCollection from "../PokemonCollection";
 import PokemonForm from "../PokemonForm";
 import Search from "../Search";
+import { Link } from "react-router-dom";
 import { Container } from "semantic-ui-react";
 
 function CatPage() {
