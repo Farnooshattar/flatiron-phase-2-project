@@ -1,0 +1,85 @@
+{
+    "cats": [
+      {
+        "id": 1,
+        "name": "charmander",
+        "hp": 39,
+        "sprites": {
+          "front": "https://cdn2.thecatapi.com/images/2mv.jpg",
+          "back": "Lovely cat!"
+        }
+      },
+      {
+        "id": 2,
+        "name": "charmander",
+        "hp": 39,
+        "sprites": {
+          "front": "https://cdn2.thecatapi.com/images/8CuEPFNuD.jpg",
+          "back": "Lovely cat!"
+        }
+      },
+      {
+        "id": 3,
+        "name": "charmander",
+        "hp": 39,
+        "sprites": {
+          "front": "https://cdn2.thecatapi.com/images/eih.jpg",
+          "back": "Lovely cat!"
+        }
+      },
+      {
+        "id": 4,
+        "name": "charmeleon",
+        "hp": 58,
+        "sprites": {
+          "front": "https://cdn2.thecatapi.com/images/9tc.jpg",
+          "back": "Purrrrrr!"
+        }
+      },
+      {
+        "id": 5,
+        "name": "charizard",
+        "hp": 78,
+        "sprites": {
+          "front": "https://cdn2.thecatapi.com/images/MTU3NDQ3OQ.jpg",
+          "back": "So cute!!!"
+        }
+      },
+      {
+        "id": 6,
+        "name": "squirtle",
+        "hp": 44,
+        "sprites": {
+          "front": "https://cdn2.thecatapi.com/images/MTkxNzk2OA.jpg",
+          "back": "Like sleeping!"
+        }
+      },
+      {
+        "id": 7,
+        "name": "wartortle",
+        "hp": 59,
+        "sprites": {
+          "front": "https://cdn2.thecatapi.com/images/4qG-5FC0J.jpg",
+          "back": "Adorable!"
+        }
+      },
+      {
+        "id": 8,
+        "name": "caterpie",
+        "hp": 45,
+        "sprites": {
+          "front": "https://cdn2.thecatapi.com/images/BDMOZo668.jpg",
+          "back": "Cutie!"
+        }
+      },
+      {
+        "id": 9,
+        "name": "metapod",
+        "hp": 50,
+        "sprites": {
+          "front": "https://cdn2.thecatapi.com/images/duo.jpg",
+          "back": "Love it!"
+        }
+      }
+    ]
+  }

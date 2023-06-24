@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: black
 }
 
 .App-logo {
@@ -8,8 +9,8 @@
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+  background-color: white;
+  height: 50px;
   padding: 20px;
   color: white;
 }
@@ -21,3 +22,21 @@
 .App-intro {
   font-size: large;
 }
+.logo {
+  margin-right: 0.5rem;
+  color: transparent;
+  text-shadow: 0 0 0 black;
+}
+.header {
+  font-size: 20px;
+  font-weight: bold;
+  color: black 
+}
+ .image img {
+  max-width: 300px;
+  max-height: 225px;
+  width: auto;
+  height: auto;
+}
+
+

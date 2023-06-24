@@ -1,26 +1,40 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { Card } from "semantic-ui-react";
+import Popupmodal from "./Popupmodal";
+function PokemonCard({ card, deleteFromScreen }) {
+  const { id, name, hp, sprites } = card;
+  const [isFav, setFav] = useState(false);
+  const onFavClick = () => setFav(!isFav);
 
-function PokemonCard({card}) {
-  const {id, name, hp, sprites} = card
-  const [side, showSide] = useState("true")
-  const onCardClick = () => showSide(!side)
-  
+  const handleDelete = () => {
+    fetch(`http://localhost:6001/cats/${id}`, { method: "DELETE" })
+      .then((r) => r.json())
+      .then(() => deleteFromScreen(id));
+  };
   return (
-    <Card onClick={onCardClick}>
+    <Card>
       <div>
         <div className="image">
-          {(side)?
-          <img src={sprites.front} alt="oh no!" />
-          : <img src={sprites.back} alt="oh no!" />}
+          <img src={sprites.front} />
         </div>
         <div className="content">
+          <Popupmodal />
           <div className="header">{name}</div>
         </div>
         <div className="extra content">
           <span>
-            <i className="icon heartbeat red" />
-            {hp}
+            {isFav ? (
+              <button className="icon heart red" onClick={onFavClick}>
+                ❤️
+              </button>
+            ) : (
+              <button className="icon heartbeat red" onClick={onFavClick}>
+                💔
+              </button>
+            )}
+            <button className="emoji-button delete" onClick={handleDelete}>
+              🗑
+            </button>
           </span>
         </div>
       </div>

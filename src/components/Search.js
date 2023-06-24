@@ -1,27 +1,34 @@
-import React, {useState} from "react";
+// components/Search.js
+import React, { useState } from "react";
 
-function Search({searchedCard}) {
-  const [searchedName, setSearchedName] = useState("");
-  function handleSearchChange(e){
-    //console.log(e.target.value)
-    setSearchedName(e.target.value)
+function Search({ searchCard }) {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  function handleSearchChange(event) {
+    setSearchTerm(event.target.value);
   }
-  
-  function handleClick(e){
-    e.preventDefault()
-    console.log(searchedName)
-    if (searchedName !== "") searchedCard(searchedName)
+
+  function handleSearchSubmit(event) {
+    event.preventDefault();
+    if (searchTerm.trim() !== "") {
+      searchCard(searchTerm);
+    }
   }
+
   return (
     <div className="ui search">
       <div className="ui icon input">
-        
-        <form onSubmit={handleClick}>
-        <input className="prompt" value={searchedName} onChange={handleSearchChange}/>
-        <button type="submit">
-        <i className="search icon"  />
-        </button>
-        
+        <form onSubmit={handleSearchSubmit}>
+          <input
+            className="prompt"
+            type="text"
+            value={searchTerm}
+            onChange={handleSearchChange}
+            placeholder="Search Cats"
+          />
+          <button type="submit">
+            <i className="search icon" />
+          </button>
         </form>
       </div>
     </div>

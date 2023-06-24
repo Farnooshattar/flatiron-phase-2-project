@@ -1,11 +1,26 @@
 import React from "react";
-import PokemonPage from "./PokemonPage";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import CatPage from "./pages/CatPage";
+import AboutPage from "./pages/AboutPage";
+import NavBar from "./NavBar";
 
 function App() {
   return (
-    <div className="App">
-      <PokemonPage />
-    </div>
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          <div>
+            <NavBar />
+          </div>
+        </header>
+        <Routes>
+          <Route exact path="/" element={<HomePage />} />
+          <Route path="/cats" element={<CatPage />} />
+          <Route path="/about" element={<AboutPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
