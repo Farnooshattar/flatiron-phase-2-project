@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form } from "semantic-ui-react";
 
-//adds a cat with the info
+// Component for adding a cat with the provided information
 function CatAddForm({ addCat }) {
   const [catData, setCatData] = useState({
     name: "",
@@ -21,11 +21,11 @@ function CatAddForm({ addCat }) {
 
     const newCat = {
       name: catData.name,
-
       url: catData.url,
       comment: catData.comment,
     };
 
+    // Send a POST request to the server with the new cat data
     fetch("http://localhost:6001/cats", {
       method: "POST",
       headers: {
@@ -35,10 +35,12 @@ function CatAddForm({ addCat }) {
     })
       .then((response) => response.json())
       .then((data) => {
+        // Call the addCat function passed as a prop to update the collection with the new cat
         addCat(data);
+
+        // Reset the cat data inputs after successful submission
         setCatData({
           name: "",
-
           url: "",
           comment: "",
         });
