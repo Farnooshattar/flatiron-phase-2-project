@@ -14,8 +14,7 @@ function DisplayCat() {
       .then((response) => response.json())
       .then((data) => setCat(data));
   }, []);
-  console.log("cat", cat);
-  //console.log(cat.sprites.front);
+
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
       <Card>
@@ -23,14 +22,11 @@ function DisplayCat() {
           <img src={cat.url} alt="" />
         </div>
 
-        {/* <Popupmodal
-            updatedcomment={updatedcomment}
-            handleNewComment={handleNewComment}
-          /> */}
         <div style={{ color: "red" }}>{cat.name}</div>
         <div style={{ color: "black" }}>
           <p style={{ fontSize: "15px" }}>{cat.comment}</p>
         </div>
+        
       </Card>
     </div>
   );

@@ -6,8 +6,8 @@ function CatForm({ addCat }) {
   const [catData, setCatData] = useState({
     name: "",
 
-    frontUrl: "",
-    backUrl: "",
+    url: "",
+    comment: "",
   });
 
   function handleChange(event) {
@@ -23,10 +23,8 @@ function CatForm({ addCat }) {
     const newCat = {
       name: catData.name,
 
-      sprites: {
-        front: catData.frontUrl,
-        back: catData.backUrl,
-      },
+      url: catData.url,
+      comment: catData.comment,
     };
 
     fetch("http://localhost:6001/cats", {
@@ -42,8 +40,8 @@ function CatForm({ addCat }) {
         setCatData({
           name: "",
 
-          frontUrl: "",
-          backUrl: "",
+          url: "",
+          comment: "",
         });
       });
   }
@@ -64,30 +62,31 @@ function CatForm({ addCat }) {
             value={catData.name}
             onChange={handleChange}
           />
-          {/* <Form.Input
-            fluid
-            label="HP"
-            placeholder="HP"
-            name="hp"
-            value={pokeData.hp}
-            onChange={handleChange}
-          /> */}
+
           <Form.Input
             fluid
-            label="Front Image URL"
+            label="Image URL"
             placeholder="URL"
-            name="frontUrl"
-            value={catData.frontUrl}
+            name="url"
+            value={catData.url}
             onChange={handleChange}
           />
           <Form.Input
+            fluid
+            label="Comment"
+            placeholder="Comment"
+            name="comment"
+            value={catData.comment}
+            onChange={handleChange}
+          />
+          {/* <Form.Input
             fluid
             label="Back Image URL"
             placeholder="Description"
             name="backUrl"
             value={catData.backUrl}
             onChange={handleChange}
-          />
+          /> */}
         </Form.Group>
         <Form.Button>
           <span className="logo" role="img">
