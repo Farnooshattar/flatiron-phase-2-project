@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Form } from "semantic-ui-react";
-
+//you can change the info about a cat
 function CatCommentForm({ id }) {
   const [catComment, setcatComment] = useState({
     comment: "",
