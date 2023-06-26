@@ -3,14 +3,14 @@
     {
       "id": 1,
       "name": "Whiskers",
-      "comment": "Whiskers is a mischievous tabby cat with striking green eyes. Known for his playful nature, he loves chasing after toy mice and pouncing on anything that moves. Whiskers is a social cat who enjoys cuddling up with his human companions and purring contentedly.",
+      "comment": "Whiskers is a charming and enigmatic feline with a distinctive personality. Whiskers may be found investigating every nook and cranny.",
       "url": "https://cdn2.thecatapi.com/images/2mv.jpg",
       "fav": false
     },
     {
       "id": 2,
       "name": "Mittens",
-      "comment": " hello. Mittens is a playful and adventurous calico cat. With patches of orange, black, and white fur, she's always on the lookout for new adventures. Mittens loves climbing trees, exploring hidden corners, and chasing butterflies. She's full of energy and brings joy and laughter to everyone around her.",
+      "comment": "Mittens is a playful and adventurous calico cat. With patches of orange, black, and white fur, she's always on the lookout for new adventures. Mittens loves climbing trees, exploring hidden corners, and chasing butterflies. She's full of energy and brings joy and laughter to everyone around her.",
       "url": "https://cdn2.thecatapi.com/images/8CuEPFNuD.jpg",
       "fav": true
     },
