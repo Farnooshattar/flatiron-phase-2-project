@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Card } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 
 function DisplayCat() {
   const [cat, setCat] = useState([]);
@@ -26,7 +27,9 @@ function DisplayCat() {
         <div style={{ color: "black" }}>
           <p style={{ fontSize: "15px" }}>{cat.comment}</p>
         </div>
-        
+        <Link style={{ fontWeight: "bold" }} to="/cats">
+          Go Back
+        </Link>
       </Card>
     </div>
   );
