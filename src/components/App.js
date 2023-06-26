@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import CatPage from "./pages/CatPage";
-import AboutPage from "./pages/AboutPage";
+import TicTacToe from "./pages/TicTacToe";
 import DisplayCat from "./pages/DisplayCat";
 import NavBar from "./NavBar";
 
@@ -23,8 +23,8 @@ function App() {
           <Route exact path="/cats">
             <CatPage />
           </Route>
-          <Route path="/about">
-            <AboutPage />
+          <Route path="/tictactoe">
+            <TicTacToe />
           </Route>
           <Route path="/cats/:id">
             <DisplayCat />

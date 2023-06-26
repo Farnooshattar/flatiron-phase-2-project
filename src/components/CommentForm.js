@@ -26,27 +26,18 @@ function CommentForm({ id }) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(catComment),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        //addComment(data);
-        // setcatComment({
-        //   name: "",
-        //   frontUrl: "",
-        //   backUrl: "",
-        // });
-      });
+    }).then((response) => response.json());
   }
 
   return (
     <div>
-      <h2>Add a new comment!</h2>
+      <br />
       <Form onSubmit={handleSubmit}>
         <Form.Group widths="equal">
           <Form.Input
             fluid
-            label="Comment"
-            placeholder="Comment"
+            label="Update cat's info"
+            placeholder="type here"
             name="comment"
             value={catComment.comment}
             onChange={handleChange}

@@ -4,55 +4,64 @@
       "id": 1,
       "name": "Whiskers",
       "comment": "Whiskers is a mischievous tabby cat with striking green eyes. Known for his playful nature, he loves chasing after toy mice and pouncing on anything that moves. Whiskers is a social cat who enjoys cuddling up with his human companions and purring contentedly.",
-      "url": "https://cdn2.thecatapi.com/images/2mv.jpg"
+      "url": "https://cdn2.thecatapi.com/images/2mv.jpg",
+      "fav": false
     },
     {
       "id": 2,
       "name": "Mittens",
-      "comment": " Mittens is a playful and adventurous calico cat. With patches of orange, black, and white fur, she's always on the lookout for new adventures. Mittens loves climbing trees, exploring hidden corners, and chasing butterflies. She's full of energy and brings joy and laughter to everyone around her.",
-      "url": "https://cdn2.thecatapi.com/images/8CuEPFNuD.jpg"
+      "comment": " hello. Mittens is a playful and adventurous calico cat. With patches of orange, black, and white fur, she's always on the lookout for new adventures. Mittens loves climbing trees, exploring hidden corners, and chasing butterflies. She's full of energy and brings joy and laughter to everyone around her.",
+      "url": "https://cdn2.thecatapi.com/images/8CuEPFNuD.jpg",
+      "fav": false
     },
     {
       "id": 3,
       "name": "Bella",
       "comment": " Bella is a petite and affectionate Scottish Fold cat with adorable folded ears. With her gentle and loving nature, she's the epitome of a lap cat, seeking warmth and snuggles from her human companions. Bella is a calm and serene presence, providing comfort and relaxation to those around her with her soothing purrs.",
-      "url": "https://cdn2.thecatapi.com/images/eih.jpg"
+      "url": "https://cdn2.thecatapi.com/images/eih.jpg",
+      "fav": true
     },
     {
       "id": 4,
       "name": "Max",
       "comment": "Max is a sleek and athletic Bengal cat with a coat adorned with beautiful leopard-like spots. Known for his agility and grace, he loves climbing, leaping, and exploring his environment. Max has an inquisitive nature and is always ready for an adventure, making him an excellent partner for outdoor expeditions.",
-      "url": "https://cdn2.thecatapi.com/images/9tc.jpg"
+      "url": "https://cdn2.thecatapi.com/images/9tc.jpg",
+      "fav": true
     },
     {
       "id": 5,
       "name": "Misty",
       "comment": "Misty is a shy and gentle Russian Blue cat with a coat of soft, bluish-gray fur. She's a quiet observer, often found perched on windowsills, watching birds with her captivating green eyes. Misty is a loyal companion who forms deep bonds with her human family, offering comfort and companionship during quiet moments.",
-      "url": "https://cdn2.thecatapi.com/images/MTU3NDQ3OQ.jpg"
+      "url": "https://cdn2.thecatapi.com/images/MTU3NDQ3OQ.jpg",
+      "fav": false
     },
     {
       "id": 6,
       "name": "Leo",
       "comment": "Leo is a charismatic orange tabby cat with a charismatic personality. He possesses a confident and outgoing demeanor, making him the center of attention wherever he goes. Leo is an expert at entertaining others, showcasing his acrobatic skills and captivating everyone with his playful antics.",
-      "url": "https://cdn2.thecatapi.com/images/MTkxNzk2OA.jpg"
+      "url": "https://cdn2.thecatapi.com/images/MTkxNzk2OA.jpg",
+      "fav": false
     },
     {
       "id": 7,
       "name": "Oliver",
       "comment": "Oliver is a fluffy Persian cat with a luxurious coat of white and silver fur. With a gentle and calm nature, he enjoys lounging in comfortable spots and being pampered. Oliver is a sophisticated feline who appreciates the finer things in life, such as being brushed and indulging in gourmet treats.",
-      "url": "https://cdn2.thecatapi.com/images/4qG-5FC0J.jpg"
+      "url": "https://cdn2.thecatapi.com/images/4qG-5FC0J.jpg",
+      "fav": false
     },
     {
       "id": 8,
       "name": "Coco",
       "comment": "Coco is a playful and curious Siamese cat with striking blue eyes. She's known for her vocal nature and enjoys engaging in conversations with her humans. Coco is highly intelligent and easily trainable, and she loves showing off her tricks, like fetching toys or jumping through hoops.",
-      "url": "https://cdn2.thecatapi.com/images/BDMOZo668.jpg"
+      "url": "https://cdn2.thecatapi.com/images/BDMOZo668.jpg",
+      "fav": false
     },
     {
       "id": 9,
       "name": "Simba",
       "comment": "Simba is a majestic Maine Coon with a regal appearance. With his tufted ears and fluffy mane, he commands attention wherever he goes. Simba has a friendly and affectionate nature, enjoying the company of both humans and other animals. He's also a natural-born hunter, often showcasing his skills with toys or during outdoor expeditions.",
-      "url": "https://cdn2.thecatapi.com/images/duo.jpg"
+      "url": "https://cdn2.thecatapi.com/images/duo.jpg",
+      "fav": false
     }
   ]
 }

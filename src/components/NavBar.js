@@ -26,10 +26,10 @@ function NavBar() {
         Cats
       </NavLink>
       <NavLink
-        to="/about"
+        to="/tictactoe"
         activeClassName="nav-link"
         className="nav-link-unselected">
-        About
+        Game
       </NavLink>
     </div>
   );

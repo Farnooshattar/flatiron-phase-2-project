@@ -4,10 +4,26 @@ import { Link } from "react-router-dom";
 import CommentForm from "./CommentForm";
 
 function CatCard({ card, deleteFromScreen }) {
-  const { id, name, comment, url } = card;
-  const [isFav, setFav] = useState(false);
-  const onFavClick = () => setFav(!isFav);
-  
+  const { id, name, comment, url, fav } = card;
+  const [isFav, setFav] = useState(fav);
+  const [favDB, setFavDB] = useState({
+    fav: fav,
+  });
+
+  const onFavClick = () => {
+    const updatedFav = !isFav; // Get the updated value of isFav
+    setFav(updatedFav);
+    setFavDB({ fav: updatedFav }); // Pass the updated value to setFavDB
+    console.log(favDB);
+    fetch(`http://localhost:6001/cats/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ fav: updatedFav }), // Update the body with the correct field name
+    });
+  };
+
   const handleDelete = () => {
     fetch(`http://localhost:6001/cats/${id}`, { method: "DELETE" })
       .then((r) => r.json())
@@ -30,6 +46,7 @@ function CatCard({ card, deleteFromScreen }) {
           <div className="header">{name}</div>
         </div>
         <div className="extra content">
+          <p className="paragraph">Click on image for more info</p>
           <span>
             {isFav ? (
               <button className="icon heart red" onClick={onFavClick}>
