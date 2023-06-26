@@ -12,7 +12,6 @@
   background-color: white;
   height: 50px;
   padding: 20px;
-  color: white;
 }
 
 .App-title {
@@ -37,6 +36,14 @@
   max-height: 225px;
   width: auto;
   height: auto;
+}
+.nav-link {
+  color:blueviolet;
+  
+}
+.nav-link-unselected {
+  color:red;
+  text-decoration: underline;
 }
 
 

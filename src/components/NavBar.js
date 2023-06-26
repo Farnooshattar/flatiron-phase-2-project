@@ -10,13 +10,25 @@ function NavBar() {
         marginBottom: "12px",
         fontSize: "20px",
       }}>
-      <NavLink style={{ padding: "10px", color: "black" }} to="/">
+      <NavLink
+        to="/"
+        exact
+        style={{ padding: "10px" }}
+        activeClassName="nav-link"
+        className="nav-link-unselected">
         Home
       </NavLink>
-      <NavLink style={{ padding: "10px", color: "black" }} to="/cats">
+      <NavLink
+        to="/cats"
+        style={{ padding: "10px" }}
+        activeClassName="nav-link"
+        className="nav-link-unselected">
         Cats
       </NavLink>
-      <NavLink style={{ padding: "10px", color: "black" }} to="/about">
+      <NavLink
+        to="/about"
+        activeClassName="nav-link"
+        className="nav-link-unselected">
         About
       </NavLink>
     </div>

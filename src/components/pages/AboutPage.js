@@ -1,69 +1,47 @@
-import React, { useState } from "react";
-function AboutPage() {
-  const [favAnimal, setFavAnimal] = useState("");
-  const [showDialog, setShowDialog] = useState(false);
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Link,
+  Route,
+  Routes,
+  useParams,
+} from "react-router-dom";
 
-  const handleInputChange = (e) => {
-    setFavAnimal(e.target.value);
-  };
-
-  const handleDialogSubmit = (e) => {
-    e.preventDefault();
-    console.log("Favorite animal:", favAnimal);
-    setShowDialog(false);
-  };
-
-  const handleUpdateDetailsClick = () => {
-    setShowDialog(true);
-  };
-
-  const handleCancelClick = () => {
-    setShowDialog(false);
-  };
+export default function AboutPage() {
   return (
-    <div>
-      <h1 style={{ color: "white" }}>About this Project</h1>
-      <button id="updateDetails" onClick={handleUpdateDetailsClick}>
-        Update details
-      </button>
-
-      {showDialog && (
-        <dialog open id="favDialog">
-          <form onSubmit={handleDialogSubmit}>
-            <p>
-              <label htmlFor="favAnimal">Favorite animal:</label>
-              <select
-                id="favAnimal"
-                name="favAnimal"
-                value={favAnimal}
-                onChange={handleInputChange}>
-                <option></option>
-                <option>Brine shrimp</option>
-                <option>Red panda</option>
-                <option>Spider monkey</option>
-              </select>
-            </p>
-            <div>
-              <button id="cancel" type="reset" onClick={handleCancelClick}>
-                Cancel
-              </button>
-              <button type="submit">Confirm</button>
-            </div>
-          </form>
-        </dialog>
-      )}
+    <Router>
       <div>
-        <div></div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <button type="submit">submit</button>
+        <h2>Accounts</h2>
+
+        <ul>
+          <li>
+            <Link to="/netflix">Netflix</Link>
+          </li>
+          <li>
+            <Link to="/zillow-group">Zillow Group</Link>
+          </li>
+          <li>
+            <Link to="/yahoo">Yahoo</Link>
+          </li>
+          <li>
+            <Link to="/modus-create">Modus Create</Link>
+          </li>
+        </ul>
+
+        <Routes>
+          <Route path="/:id" element={<Child />} />
+        </Routes>
       </div>
-    </div>
+    </Router>
   );
 }
 
-export default AboutPage;
+function Child() {
+  let { id } = useParams();
+
+  return (
+    <div>
+      <h3>ID: {id}</h3>
+    </div>
+  );
+}

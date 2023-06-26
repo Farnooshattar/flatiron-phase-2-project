@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { Card } from "semantic-ui-react";
 import Popupmodal from "./Popupmodal";
+import { useParams } from "react-router-dom";
 
 function PokemonCard({ card, deleteFromScreen }) {
+  const params = useParams();
+  console.log("params", params.id);
+  const cardId = params.id;
   const { id, name, hp, sprites } = card;
   const [isFav, setFav] = useState(false);
   const onFavClick = () => setFav(!isFav);
