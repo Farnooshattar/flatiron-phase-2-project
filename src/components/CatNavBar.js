@@ -25,7 +25,7 @@ function CatNavBar() {
       </NavLink>
       <NavLink
         to="/tictactoe"
-        style={{ padding: "10px", color: "black" }}
+        style={{ padding: "10px", color: "black", fontSize: "15px" }}
         activeStyle={{ color: "red" }}>
         Game
       </NavLink>
