@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Form } from "semantic-ui-react";
 
+//adds a cat with the info
 function CatAddForm({ addCat }) {
   const [catData, setCatData] = useState({
     name: "",
-
     url: "",
     comment: "",
   });
