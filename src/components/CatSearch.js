@@ -1,7 +1,6 @@
-// components/Search.js
 import React, { useState } from "react";
 
-function Search({ searchCard }) {
+function CatSearch({ searchCard }) {
   const [searchTerm, setSearchTerm] = useState("");
 
   function handleSearchChange(event) {
@@ -35,4 +34,4 @@ function Search({ searchCard }) {
   );
 }
 
-export default Search;
+export default CatSearch;

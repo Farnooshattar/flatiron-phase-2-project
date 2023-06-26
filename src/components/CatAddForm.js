@@ -1,8 +1,7 @@
-// components/PokemonForm.js
 import React, { useState } from "react";
 import { Form } from "semantic-ui-react";
 
-function CatForm({ addCat }) {
+function CatAddForm({ addCat }) {
   const [catData, setCatData] = useState({
     name: "",
 
@@ -79,14 +78,6 @@ function CatForm({ addCat }) {
             value={catData.comment}
             onChange={handleChange}
           />
-          {/* <Form.Input
-            fluid
-            label="Back Image URL"
-            placeholder="Description"
-            name="backUrl"
-            value={catData.backUrl}
-            onChange={handleChange}
-          /> */}
         </Form.Group>
         <Form.Button>
           <span className="logo" role="img">
@@ -99,4 +90,4 @@ function CatForm({ addCat }) {
   );
 }
 
-export default CatForm;
+export default CatAddForm;

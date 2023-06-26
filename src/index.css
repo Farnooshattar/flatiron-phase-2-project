@@ -43,14 +43,6 @@
   width: auto;
   height: auto;
 }
-.nav-link {
-  color:blueviolet;
-  
-}
-.nav-link-unselected {
-  color:red;
-  text-decoration: underline;
-}
 * {
   box-sizing: border-box;
 }

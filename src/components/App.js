@@ -4,7 +4,7 @@ import HomePage from "./pages/HomePage";
 import CatPage from "./pages/CatPage";
 import TicTacToe from "./pages/TicTacToe";
 import DisplayCat from "./pages/DisplayCat";
-import NavBar from "./NavBar";
+import CatNavBar from "./CatNavBar";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <div className="App">
         <header className="App-header">
           <div>
-            <NavBar />
+            <CatNavBar />
           </div>
         </header>
 

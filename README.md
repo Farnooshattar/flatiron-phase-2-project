@@ -1,60 +1,75 @@
-# Practice Challenge: Pokemon Searcher
+# Project Readme
 
-![Pokemon search screen recording](https://curriculum-content.s3.amazonaws.com/react/pokemon.gif)
+This project is a React application that allows users to interact with a cat collection. It includes features such as displaying cat images, adding new cats to the collection, searching for specific cats, and viewing detailed information about individual cats. The project uses React Router for navigation and Semantic UI for styling.
 
-(Note: If the gif isn't working, view it directly by navigating [here](https://curriculum-content.s3.amazonaws.com/react/pokemon.gif))
+## Prerequisites
 
-## Setup
+Before running the project, ensure that you have the following dependencies installed:
 
-All the information about Pokemon can be found in the `db.json` file. We'll
-be using `json-server` to create a RESTful API for our database.
+- React
+- ReactDOM
+- react-router-dom
+- semantic-ui-css
 
-Run `npm install` to install our dependencies.
+## Getting Started
 
-Then, run `npm run server` to start up `json-server` on `http://localhost:3001`.
+1. Clone the project repository to your local machine.
+2. Open a terminal and navigate to the project directory.
+3. Install the project dependencies by running the following command:
+   ```
+   npm install
+   ```
+4. Once the dependencies are installed, you can start the application with the following command:
+   ```
+   npm start
+   ```
+   This will launch the application in your default web browser. If it doesn't open automatically, you can access it at [http://localhost:3000](http://localhost:3000).
 
-In another tab, run `npm start` to start up our React app at `http://localhost:3000`.
+## Project Structure
 
-Before you start building out the application, the first step that you should
-take is to draw out your component hierarchy. This will tell you how components
-can pass data to each other as well as where that information should be stored.
+The project directory structure is organized as follows:
 
-## Project Goals
+- **`/components`**: Contains reusable React components used throughout the application.
+- **`/pages`**: Contains individual page components that define the content for different routes.
+- **`/images`**: Contains image assets used in the application.
+- **`/index.css`**: CSS styles specific to the index page.
+- **`/App.js`**: The main component that serves as the entry point for the application.
+- **`/CatNavBar.js`**: Component for displaying the navigation bar at the top of the application.
+- **`/Counter.js`**: Component for displaying a counter.
+- **`/LoginShowmodal.js`**: Component for displaying a login modal.
+- **`/CatCollection.js`**: Component for displaying the collection of cats.
+- **`/CatAddForm.js`**: Component for adding a new cat to the collection.
+- **`/CatSearch.js`**: Component for searching cats in the collection.
+- **`/DisplayCat.js`**: Component for displaying detailed information about a specific cat.
+- **`/HomePage.js`**: Component for the home page of the application.
+- **`/CatPage.js`**: Component for the cat collection page.
 
-- Create an index displaying Pokemon 'cards'
-  - Render each Pokemon name, sprite, and hp in a card
-  - _When clicked_, the card should toggle between displaying the front and back
-    sprites
-- Allow users to search a Pokemon by its name in order to narrow down the cards
-  shown on the page
-- Wire up the form to add a missing Pokemon (Bulbasaur is missing, and you can
-  probably intuit the image links to use based on the data you have). Since
-  there aren't any validations, you may have to manually remove additions from
-  the `db.json` file if you make a mistake on a POST request, etc. When a new
-  Pokemon is added, it should show on the page without having to refresh.
+## Routes
 
-## Project Requirements
+The application uses React Router to handle different routes. The following routes are defined:
 
-- components using state and props
-- re-renders based on client-side events
-- can both get data from, and post data to the json server/database
+- **`/`**: Home page route, displays the `HomePage` component.
+- **`/cats`**: Cat collection route, displays the `CatPage` component.
+- **`/tictactoe`**: Tic-tac-toe game route, displays the `TicTacToe` component.
+- **`/cats/:id`**: Route for displaying detailed information about a specific cat, displays the `DisplayCat` component.
 
-## Trying to Figure Out Where to Start
+## Contributing
 
-For the most part, the framework for this application is already made, with a
-simple json server, and a React app, with all the components needed. When you
-run `npm start` a json server will spin up and you can access the Pokemon info
-at `http://localhost:3001/pokemon`, and your React application will also start,
-on port 3000.
+If you'd like to contribute to this project, you can follow these steps:
 
-Given a list of deliverables, our goal is to navigate the existing code base and
-implement several new features. Take some time to familiarize yourself with the
-structure of the application, and think about where you will be making changes
-in order to implement the new features. While you could solve this lab without
-creating new components, you are encouraged to do so if it makes sense to do
-that at any point.
+1. Fork the repository on GitHub.
+2. Create a new branch with a descriptive name for your feature or bug fix.
+3. Make the necessary changes in your branch.
+4. Test your changes to ensure they work as expected.
+5. Commit your changes and push them to your forked repository.
+6. Submit a pull request describing your changes.
 
-Be sure to use good programming practices, such as clear variable names and
-single responsibility functions. We want our react app to be clean, easy to
-read and understand, and of course, easy to to debug, or even add more
-features to later.
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Acknowledgements
+
+- This project was developed using React and various React libraries.
+- The project uses the Semantic UI CSS framework for styling.
+- Cat images are sourced from external resources.

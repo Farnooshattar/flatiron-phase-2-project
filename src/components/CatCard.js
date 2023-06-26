@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Card } from "semantic-ui-react";
 import { Link } from "react-router-dom";
-import CommentForm from "./CommentForm";
+import CatCommentForm from "./CatCommentForm";
 
 function CatCard({ card, deleteFromScreen }) {
   const { id, name, comment, url, fav } = card;
@@ -39,10 +39,6 @@ function CatCard({ card, deleteFromScreen }) {
           </Link>
         </div>
         <div className="content">
-          {/* <Popupmodal
-            updatedcomment={updatedcomment}
-            handleNewComment={handleNewComment}
-          /> */}
           <div className="header">{name}</div>
         </div>
         <div className="extra content">
@@ -61,7 +57,7 @@ function CatCard({ card, deleteFromScreen }) {
               🗑
             </button>
           </span>
-          <CommentForm id={id} />
+          <CatCommentForm id={id} />
         </div>
       </div>
     </Card>

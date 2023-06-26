@@ -1,6 +1,6 @@
 import React from "react";
-
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Square({ value, onSquareClick }) {
   return (
@@ -85,12 +85,38 @@ export default function TicTacToe() {
   });
 
   return (
-    <div className="game">
-      <div className="game-board">
-        <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
-      </div>
-      <div className="game-info">
-        <ol>{moves}</ol>
+    <div>
+      <p style={{ color: "white", margin: "10px" }}>
+        Have fun with the game!!!
+      </p>
+      <p style={{ color: "white", margin: "10px" }}>
+        credits:
+        <a
+          style={{
+            fontWeight: "bold",
+            padding: "15px",
+            textDecoration: "underline",
+          }}
+          href="https://react.dev/learn/tutorial-tic-tac-toe"
+          target="_blank"
+          rel="noopener noreferrer">
+          React Tutorials
+        </a>
+      </p>
+      <p style={{ color: "white" }}>
+        This page is just showing the 3rd navigation
+      </p>
+      <div className="game">
+        <div className="game-board">
+          <Board
+            xIsNext={xIsNext}
+            squares={currentSquares}
+            onPlay={handlePlay}
+          />
+        </div>
+        <div className="game-info">
+          <ol>{moves}</ol>
+        </div>
       </div>
     </div>
   );

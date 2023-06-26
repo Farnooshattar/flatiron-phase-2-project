@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // use showmodal for login
-function Login() {
+function LoginShowmodal() {
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
   const [showDialog, setShowDialog] = useState(false);
@@ -73,4 +73,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default LoginShowmodal;

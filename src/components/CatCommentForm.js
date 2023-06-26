@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form } from "semantic-ui-react";
 
-function CommentForm({ id }) {
+function CatCommentForm({ id }) {
   const [catComment, setcatComment] = useState({
     comment: "",
   });
@@ -16,9 +16,7 @@ function CommentForm({ id }) {
   function handleSubmit(event) {
     event.preventDefault();
     console.log(catComment);
-    // const newComment = {
-    //   comment: catComment.comment,
-    // };
+
     console.log(id);
     fetch(`http://localhost:6001/cats/${id}`, {
       method: "PATCH",
@@ -54,4 +52,4 @@ function CommentForm({ id }) {
   );
 }
 
-export default CommentForm;
+export default CatCommentForm;

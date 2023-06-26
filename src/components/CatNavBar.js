@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-function NavBar() {
+function CatNavBar() {
   return (
     <div
       style={{
@@ -13,26 +13,24 @@ function NavBar() {
       <NavLink
         to="/"
         exact
-        style={{ padding: "10px" }}
-        activeClassName="nav-link"
-        className="nav-link-unselected">
+        style={{ padding: "10px", color: "black" }}
+        activeStyle={{ color: "red" }}>
         Home
       </NavLink>
       <NavLink
         to="/cats"
-        style={{ padding: "10px" }}
-        activeClassName="nav-link"
-        className="nav-link-unselected">
+        style={{ padding: "10px", color: "black" }}
+        activeStyle={{ color: "red" }}>
         Cats
       </NavLink>
       <NavLink
         to="/tictactoe"
-        activeClassName="nav-link"
-        className="nav-link-unselected">
+        style={{ padding: "10px", color: "black" }}
+        activeStyle={{ color: "red" }}>
         Game
       </NavLink>
     </div>
   );
 }
 
-export default NavBar;
+export default CatNavBar;

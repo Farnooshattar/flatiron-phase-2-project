@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CatCollection from "../CatCollection";
-import CatForm from "../CatForm";
-import Search from "../Search";
+import CatAddForm from "../CatAddForm";
+import CatSearch from "../CatSearch";
 import { Link } from "react-router-dom";
 import { Container } from "semantic-ui-react";
 
@@ -31,9 +31,9 @@ function CatPage() {
   return (
     <Container style={{ color: "white" }}>
       <br />
-      <Search searchCard={searchCard} />
+      <CatSearch searchCard={searchCard} />
       <br />
-      <CatForm addCat={addCat} />
+      <CatAddForm addCat={addCat} />
       <br />
       <Link style={{ fontWeight: "bold" }} to="/">
         Go to Home Page
