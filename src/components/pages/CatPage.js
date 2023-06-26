@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import PokemonCollection from "../PokemonCollection";
-import PokemonForm from "../PokemonForm";
+import CatCollection from "../CatCollection";
+import CatForm from "../CatForm";
 import Search from "../Search";
 import { Link } from "react-router-dom";
 import { Container } from "semantic-ui-react";
@@ -14,8 +14,8 @@ function CatPage() {
       .then((data) => setCollection(data));
   }, []);
 
-  function addPokemon(newPokemon) {
-    setCollection((prevCollection) => [newPokemon, ...prevCollection]);
+  function addCat(newCat) {
+    setCollection((prevCollection) => [newCat, ...prevCollection]);
   }
 
   function searchCard(searchedCard) {
@@ -33,7 +33,7 @@ function CatPage() {
       <br />
       <Search searchCard={searchCard} />
       <br />
-      <PokemonForm addPokemon={addPokemon} />
+      <CatForm addCat={addCat} />
       <br />
       <Link style={{ fontWeight: "bold" }} to="/">
         Go to Home Page
@@ -41,7 +41,7 @@ function CatPage() {
       <br />
       <br />
       <br />
-      <PokemonCollection
+      <CatCollection
         collection={collection}
         deleteFromScreen={deleteFromScreen}
       />

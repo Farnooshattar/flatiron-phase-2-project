@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import { Card } from "semantic-ui-react";
-import Popupmodal from "./Popupmodal";
-import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-function PokemonCard({ card, deleteFromScreen }) {
-  const params = useParams();
-  console.log("params", params.id);
-  const cardId = params.id;
+function CatCard({ card, deleteFromScreen }) {
   const { id, name, hp, sprites } = card;
   const [isFav, setFav] = useState(false);
   const onFavClick = () => setFav(!isFav);
@@ -20,7 +16,9 @@ function PokemonCard({ card, deleteFromScreen }) {
     <Card>
       <div>
         <div className="image">
-          <img src={sprites.front} />
+          <Link to={`/cats/${id}`}>
+            <img src={sprites.front} />
+          </Link>
         </div>
         <div className="content">
           {/* <Popupmodal
@@ -50,4 +48,4 @@ function PokemonCard({ card, deleteFromScreen }) {
   );
 }
 
-export default PokemonCard;
+export default CatCard;

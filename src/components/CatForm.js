@@ -2,8 +2,8 @@
 import React, { useState } from "react";
 import { Form } from "semantic-ui-react";
 
-function PokemonForm({ addPokemon }) {
-  const [pokeData, setPokeData] = useState({
+function CatForm({ addCat }) {
+  const [catData, setCatData] = useState({
     name: "",
 
     frontUrl: "",
@@ -11,8 +11,8 @@ function PokemonForm({ addPokemon }) {
   });
 
   function handleChange(event) {
-    setPokeData({
-      ...pokeData,
+    setCatData({
+      ...catData,
       [event.target.name]: event.target.value,
     });
   }
@@ -20,12 +20,12 @@ function PokemonForm({ addPokemon }) {
   function handleSubmit(event) {
     event.preventDefault();
 
-    const newPokemon = {
-      name: pokeData.name,
+    const newCat = {
+      name: catData.name,
 
       sprites: {
-        front: pokeData.frontUrl,
-        back: pokeData.backUrl,
+        front: catData.frontUrl,
+        back: catData.backUrl,
       },
     };
 
@@ -34,12 +34,12 @@ function PokemonForm({ addPokemon }) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(newPokemon),
+      body: JSON.stringify(newCat),
     })
       .then((response) => response.json())
       .then((data) => {
-        addPokemon(data);
-        setPokeData({
+        addCat(data);
+        setCatData({
           name: "",
 
           frontUrl: "",
@@ -61,7 +61,7 @@ function PokemonForm({ addPokemon }) {
             label="Name"
             placeholder="Name"
             name="name"
-            value={pokeData.name}
+            value={catData.name}
             onChange={handleChange}
           />
           {/* <Form.Input
@@ -77,7 +77,7 @@ function PokemonForm({ addPokemon }) {
             label="Front Image URL"
             placeholder="URL"
             name="frontUrl"
-            value={pokeData.frontUrl}
+            value={catData.frontUrl}
             onChange={handleChange}
           />
           <Form.Input
@@ -85,7 +85,7 @@ function PokemonForm({ addPokemon }) {
             label="Back Image URL"
             placeholder="Description"
             name="backUrl"
-            value={pokeData.backUrl}
+            value={catData.backUrl}
             onChange={handleChange}
           />
         </Form.Group>
@@ -100,4 +100,4 @@ function PokemonForm({ addPokemon }) {
   );
 }
 
-export default PokemonForm;
+export default CatForm;
