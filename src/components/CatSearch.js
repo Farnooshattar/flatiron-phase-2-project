@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+//Search cats
 function CatSearch({ searchCard }) {
   const [searchTerm, setSearchTerm] = useState("");
 
