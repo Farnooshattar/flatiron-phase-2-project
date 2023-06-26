@@ -3,7 +3,7 @@ import { Card } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 function CatCard({ card, deleteFromScreen }) {
-  const { id, name, hp, sprites } = card;
+  const { id, name, comment, url } = card;
   const [isFav, setFav] = useState(false);
   const onFavClick = () => setFav(!isFav);
 
@@ -17,7 +17,7 @@ function CatCard({ card, deleteFromScreen }) {
       <div>
         <div className="image">
           <Link to={`/cats/${id}`}>
-            <img src={sprites.front} />
+            <img src={url} />
           </Link>
         </div>
         <div className="content">
