@@ -18,7 +18,7 @@ function CatCommentForm({ id }) {
     console.log(catComment);
 
     console.log(id);
-    fetch(`http://localhost:6001/cats/${id}`, {
+    fetch(`https://cats-json-database.onrender.com/cats/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

@@ -15,7 +15,7 @@ function CatCard({ card, deleteFromScreen }) {
     setFav(updatedFav);
     setFavDB({ fav: updatedFav }); // Pass the updated value to setFavDB
     console.log(favDB);
-    fetch(`http://localhost:6001/cats/${id}`, {
+    fetch(`https://cats-json-database.onrender.com/cats/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -25,7 +25,9 @@ function CatCard({ card, deleteFromScreen }) {
   };
 
   const handleDelete = () => {
-    fetch(`http://localhost:6001/cats/${id}`, { method: "DELETE" })
+    fetch(`https://cats-json-database.onrender.com/cats/${id}`, {
+      method: "DELETE",
+    })
       .then((r) => r.json())
       .then(() => deleteFromScreen(id));
   };

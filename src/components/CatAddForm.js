@@ -26,7 +26,7 @@ function CatAddForm({ addCat }) {
     };
 
     // Send a POST request to the server with the new cat data
-    fetch("http://localhost:6001/cats", {
+    fetch("https://cats-json-database.onrender.com/cats", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
