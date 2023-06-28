@@ -21,7 +21,7 @@ function CatPage() {
   }
 
   function searchCard(searchedCard) {
-    // Filter the collection based on the searched card name
+    // Filter the collection based on the searched cat name
     const filteredCollection = collection.filter(
       (card) => card.name === searchedCard
     );
@@ -29,7 +29,7 @@ function CatPage() {
   }
 
   const deleteFromScreen = (itemId) => {
-    // Remove an item from the collection based on its ID
+    // Remove a cat from the collection based on its ID
     setCollection(collection.filter((item) => itemId !== item.id));
   };
 
