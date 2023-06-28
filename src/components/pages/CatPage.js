@@ -10,7 +10,7 @@ function CatPage() {
 
   useEffect(() => {
     // Fetch cat collection data from the server
-    fetch("https://cats-json-database.onrender.com/cats")
+    fetch("https://cats-json.onrender.com/cats")
       .then((response) => response.json())
       .then((data) => setCollection(data));
   }, []);
