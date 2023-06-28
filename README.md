@@ -23,7 +23,7 @@ Before running the project, ensure that you have the following dependencies inst
    ```
    npm start
    ```
-   This will launch the application in your default web browser. If it doesn't open automatically, you can access it at [http://localhost:3000](http://localhost:3000). update: the db.json has been deployed through rendering: https://cats-json-database.onrender.com/cats
+   This will launch the application in your default web browser. If it doesn't open automatically, you can access it at [http://localhost:3000](http://localhost:3000). update: the db.json has been deployed through rendering: https://cats-json-database.onrender.com/cats. update: the frontend has been deploye with vercel: https://flatiron-phase-2-project.vercel.app/.
 
 ## Project Structure
 
