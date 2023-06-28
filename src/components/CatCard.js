@@ -52,7 +52,7 @@ function CatCard({ card, deleteFromScreen }) {
               </button>
             ) : (
               <button className="icon heartbeat red" onClick={onFavClick}>
-                💔
+                💟
               </button>
             )}
             <button className="emoji-button delete" onClick={handleDelete}>
