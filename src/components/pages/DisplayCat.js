@@ -14,7 +14,7 @@ function DisplayCat() {
   useEffect(() => {
     // Fetch the cat data based on the ID from the server
     // fetch(`http://localhost:6001/cats/${params.id}`)
-    fetch(`https://json-server-81fm.onrender.com/${params.id}`)
+    fetch(`https://cats-json-database.onrender.com/cats/${params.id}`)
       .then((response) => response.json())
       .then((data) => setCat(data));
   }, []);
